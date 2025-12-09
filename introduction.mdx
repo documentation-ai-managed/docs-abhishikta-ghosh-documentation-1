@@ -1,0 +1,145 @@
+---
+title: Welcome to Abhishikta Ghosh's Documentation
+description: An overview of the default documentation space designed for organizing and managing project documentation.
+---
+
+## Overview
+
+Welcome to Abhishikta Ghosh's Documentation. You use this default space to organize, manage, and collaborate on all your project documentation. It provides a centralized hub where you structure guides, APIs, changelogs, and tutorials efficiently.
+
+This space supports Markdown and MDX, enabling rich components like interactive tabs, code examples, and diagrams. Customize it with your brand color `#3B82F6` for a professional look.
+
+## Key Benefits
+
+You gain several advantages from this documentation setup:
+
+<Columns cols={3}>
+  <Card title="Centralized Organization" icon="folder" href="/docs/organization">
+    Group pages into sections and subfolders. Access everything from one navigation menu.
+  </Card>
+  <Card title="Collaboration Tools" icon="users" href="/docs/collaboration">
+    Share drafts, review changes, and track versions with built-in workflows.
+  </Card>
+  <Card title="Rich Components" icon="components" href="/docs/components">
+    Embed interactive elements like steps, tabs, and code groups for engaging docs.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Start by creating your first page. Use the editor to add MDX components and preview changes live.
+</Callout>
+
+## Getting Started
+
+Follow these steps to set up your documentation space:
+
+<Steps>
+  <Step title="Create Your First Page" icon="file-plus">
+    Navigate to the dashboard and select "New Page". Choose `introduction.mdx` as the file name.
+  </Step>
+  <Step title="Add Frontmatter" icon="settings">
+    Insert YAML frontmatter at the top:
+
+    ```yaml
+    ---
+    title: Your Page Title
+    description: Brief page summary
+    ---
+    ```
+  </Step>
+  <Step title="Customize Branding" icon="palette">
+    Update your theme config with the brand color:
+
+    <CodeGroup tabs="YAML,JSON">
+    ```yaml
+    theme:
+      brandColor: "#3B82F6"
+      logo: "/logo.svg"
+    ```
+    ```json
+    {
+      "theme": {
+        "brandColor": "#3B82F6",
+        "logo": "/logo.svg"
+      }
+    }
+    ```
+    </CodeGroup>
+  </Step>
+</Steps>
+
+## Customization Options
+
+Tailor the space to your project's needs across platforms:
+
+<Tabs>
+  <Tab title="Web Editor" icon="globe">
+    Edit directly in the browser. Preview MDX components like `<Callout>` and `<Steps>` in real-time.
+
+    ```bash
+    # No installation needed
+    npm run dev
+    ```
+  </Tab>
+  <Tab title="Local Development" icon="terminal">
+    Clone the repo and run locally for advanced workflows.
+
+    <CodeGroup tabs="npm,yarn">
+    ```bash
+    npm install
+    npm run dev
+    ```
+    ```bash
+    yarn install
+    yarn dev
+    ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Deployment" icon="cloud-upload">
+    Deploy to Vercel or Netlify with one click.
+
+    ```bash
+    vercel --prod
+    ```
+  </Tab>
+</Tabs>
+
+## Advanced Customization
+
+<ExpandableGroup>
+  <Expandable title="Theme Configuration" default-open="false">
+
+    Override defaults in your config file:
+
+    ```tsx
+    // config.tsx
+    export default {
+      theme: {
+        brandColor: '#3B82F6',
+        fontFamily: 'Inter, sans-serif',
+      },
+    };
+    ```
+
+    You adjust fonts, logos, and navigation dynamically.
+
+  </Expandable>
+  <Expandable title="Custom Components">
+
+    Extend with your own React components:
+
+    ```tsx
+    // components/CustomCard.tsx
+    import { Card } from '@components/ui';
+
+    export const ProjectCard = ({ project }) => (
+      <Card title={project.name} icon="code">
+        {project.description}
+      </Card>
+    );
+    ```
+
+  </Expandable>
+</ExpandableGroup>
+
+This setup empowers you to build scalable, branded documentation. Explore sections like organization and collaboration to maximize productivity.

@@ -1,0 +1,118 @@
+---
+title: Configuring Your Documentation Space
+description: How to personalize and optimize the documentation environment to fit your project needs.
+---
+
+## Overview
+
+Personalize your Abhishikta Ghosh Documentation space to match your project's identity and workflow. Adjust themes with your brand color `#3B82F6`, set up access controls for team members, and integrate external tools like GitHub or analytics services. These configurations enhance usability and security.
+
+<Callout kind="tip">
+  Save changes in your space settings to apply them site-wide. Test in preview mode before publishing.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Theme Adjustments" icon="palette" href="#theme-branding">
+    Customize colors and fonts to reflect your brand.
+  </Card>
+  <Card title="Access Controls" icon="shield" href="#access-controls">
+    Manage who views and edits your docs.
+  </Card>
+  <Card title="External Integrations" icon="plug" href="#integrations">
+    Connect with GitHub, Slack, or analytics.
+  </Card>
+</Columns>
+
+## Theme and Branding Adjustments
+
+Update your documentation's appearance starting with the brand color `#3B82F6`. Edit the theme configuration file to apply changes across all pages.
+
+<Steps>
+  <Step title="Locate Config File" icon="search">
+    Navigate to your space root and open `theme.json`.
+  </Step>
+  <Step title="Set Brand Color" icon="palette">
+    Replace the primary color value.
+  </Step>
+  <Step title="Preview and Deploy" icon="eye">
+    Save, preview, then deploy.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JSON,CSS">
+  ```json
+  {
+    "brandColor": "#3B82F6",
+    "fontFamily": "Inter, sans-serif",
+    "logoUrl": "https://your-site.com/logo.svg"
+  }
+  ```
+  ```css
+  :root {
+    --brand-primary: #3B82F6;
+    --brand-text: #1E293B;
+  }
+  ```
+</CodeGroup>
+
+## Access Controls
+
+Control permissions to protect sensitive documentation. Define roles for viewers, editors, and admins.
+
+<Tabs>
+  <Tab title="Role-Based Access" icon="users">
+    Assign roles via the dashboard.
+
+    | Role     | View | Edit | Admin |
+    |----------|------|------|-------|
+    | Viewer   | Yes  | No   | No    |
+    | Editor   | Yes  | Yes  | No    |
+    | Admin    | Yes  | Yes  | Yes   |
+  </Tab>
+  <Tab title="Invite Team" icon="mail">
+    Send invites with custom permissions.
+
+    ```javascript
+    // Example API call to add user
+    await fetch('/api/invite', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: 'team@company.com',
+        role: 'editor'
+      })
+    });
+    ```
+  </Tab>
+</Tabs>
+
+<Callout kind="alert">
+  Revoke access immediately for former team members to maintain security.
+</Callout>
+
+## Integration with External Tools
+
+Connect your space to tools like GitHub for version control or Google Analytics for insights.
+
+<Expandable title="GitHub Integration" default-open="true">
+  1. Generate a personal access token in GitHub settings.
+  2. Add it to your space config:
+
+  ```yaml
+  integrations:
+    github:
+      token: ghpat_your_token_here
+      repo: abhishikta-ghosh/docs
+  ```
+
+  Sync pushes automatically to update docs.
+</Expandable>
+
+<Expandable title="Analytics Setup">
+  Paste your tracking ID:
+
+  ```javascript
+  window.gtag('config', 'G-XXXXXXXXXX');
+  ```
+</Expandable>
+
+These steps optimize your Abhishikta Ghosh Documentation space for collaboration and branding. Regularly review settings as your project evolves.

@@ -1,0 +1,120 @@
+---
+title: Changelog
+description: A record of updates and changes to the documentation space features and improvements.
+---
+
+## Overview
+
+Track all updates to Abhishka Ghosh Documentation in one place. You find version history, new features, bug fixes, and improvements here. Use the components below to navigate recent changes and plan your workflow.
+
+<Columns cols={3}>
+  <Card title="Recent Releases" icon="git-branch" href="#recent-updates">
+    View the latest versions and what's new.
+  </Card>
+  <Card title="Contribute" icon="github" href="#contribute" target="_blank">
+    Submit feedback or fixes via GitHub.
+  </Card>
+  <Card title="Roadmap" icon="map" href="#roadmap">
+    See upcoming features.
+  </Card>
+</Columns>
+
+## Recent Updates
+
+Stay informed about enhancements that improve your documentation experience.
+
+<Update label="2024-11-05" description="v1.3.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added real-time collaboration for shared editing sessions
+- Introduced advanced search with filters for components and pages
+
+## Improvements
+
+- Enhanced performance for large documentation sites by 40%
+- Updated UI with brand color `#3B82F6` for better visibility
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks
+- Resolved mobile responsiveness issues in tabs
+</Update>
+
+<Update label="2024-10-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Integrated Mermaid diagram support via code blocks
+- Added expandable sections for FAQs and advanced topics
+
+## Bug Fixes
+
+- Corrected special character escaping for `{` and `<` in prose
+- Patched heading hierarchy validation to prevent H1 usage
+</Update>
+
+<Update label="2024-09-15" description="v1.1.0" tags={["breaking", "feature"]}>
+## Breaking Changes
+
+- Removed deprecated `<Mermaid>` component; use code blocks only
+
+## New Features
+
+- Launched Update components for changelog management
+- Enabled multi-language CodeGroup tabs
+
+## Improvements
+
+- Optimized JSX attribute parsing for double quotes
+</Update>
+
+<Callout kind="tip">
+Subscribe to RSS feed or GitHub notifications to get updates automatically.
+</Callout>
+
+## How to Contribute
+
+Follow these steps to suggest changes or report issues.
+
+<Steps>
+  <Step title="Check Existing Issues" icon="search">
+    Review the [GitHub issues](https://github.com/user/abhishikta-ghosh-docs/issues) for duplicates.
+  </Step>
+  <Step title="Submit a Pull Request" icon="git-pull-request">
+    Fork the repo, make changes, and open a PR with clear description.
+  </Step>
+  <Step title="Test Locally" icon="test-tube">
+    <CodeGroup tabs="npm,yarn">
+```bash
+npm install
+npm run dev
+```
+```bash
+yarn install
+yarn dev
+```
+    </CodeGroup>
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Features" icon="star">
+    Propose new components like Video embeds.
+  </Tab>
+  <Tab title="Bug Fixes" icon="bug">
+    Report parsing errors with exact reproduction steps.
+  </Tab>
+</Tabs>
+
+## Upcoming Roadmap
+
+<Expandable title="View Planned Enhancements" default-open="false">
+
+Discover features you can anticipate.
+
+| Feature | Status | ETA |
+|---------|--------|-----|
+| AI-powered search | In Progress | Q4 2024 |
+| Custom themes | Planned | Q1 2025 |
+| Export to PDF | Planned | Q2 2025 |
+
+</Expandable>
